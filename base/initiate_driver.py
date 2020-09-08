@@ -1,20 +1,20 @@
 from selenium import webdriver
-from library import configReader
+from lib import conf_reader
 
 
 def start_browser():
     global driver
 
-    if (configReader.read_config_data('Details', 'Browser')) == "Chrome":
+    if (conf_reader.read_config_data('Details', 'Browser')) == "Chrome":
         driver = webdriver.Chrome()
 
-    elif (configReader.read_config_data('Details', 'Browser')) == "Firefox":
+    elif (conf_reader.read_config_data('Details', 'Browser')) == "Firefox":
         driver = webdriver.Firefox()
 
     else:
         driver = webdriver.Chrome()
 
-    driver.get(configReader.read_config_data('Details', 'Application_Url'))
+    driver.get(conf_reader.read_config_data('Details', 'Application_Url'))
     driver.maximize_window()
     return driver
 

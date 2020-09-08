@@ -15,7 +15,7 @@ def browser():
     initiate_driver.close_browser()
 
 
-@scenario("../features/filterProducts.feature", 'Apply filters on mens footwear section')
+@scenario("../features/filter.feature", 'Apply filters on mens footwear section')
 def test_apply_filters_on_mens_footwear_section(browser):
     """Apply filters on mens footwear section"""
 
